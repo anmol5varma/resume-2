@@ -7,7 +7,7 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "/Users/anmolvarma/personal/portfolio/build"
+publish = "build"
 publishOrigin = "ui"
 command = "yarn build"
 commandOrigin = "ui"
