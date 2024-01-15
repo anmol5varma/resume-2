@@ -36,7 +36,7 @@ const Projects = () => {
                     left={isDesktop}
                     bottom={isMobile}
                     duration={500}
-                    delay={500}
+                    delay={100}
                     distance="30px"
                   >
                     <div className="project-wrapper__text">
@@ -77,7 +77,7 @@ const Projects = () => {
                     right={isDesktop}
                     bottom={isMobile}
                     duration={500}
-                    delay={500}
+                    delay={100}
                     distance="30px"
                   >
                     <div className="project-wrapper__image">
@@ -101,7 +101,7 @@ const Projects = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="cta-btn cta-btn--hero"
-            href={footer?.networks?.length > 0 && footer?.networks[2].url}
+            href={(footer?.networks?.length > 0 && footer?.networks[2].url).toString()}
           >
             View more
           </a>

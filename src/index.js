@@ -10,7 +10,8 @@ import './style/main.scss';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const { title, lang, description } = headData;
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <>
     <Helmet>
       <meta charSet="utf-8" />
       <title>{title}</title>
@@ -18,7 +19,8 @@ root.render(
       <meta name="description" content={description} />
     </Helmet>
     <App />
-  </React.StrictMode>
+  </>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

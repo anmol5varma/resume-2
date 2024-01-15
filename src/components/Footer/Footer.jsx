@@ -32,7 +32,7 @@ const Footer = () => {
               );
             })}
         </div>
-        <hr />
+        <hr style={{width: '100%'}}/>
         <p className="footer__text">
           © {new Date().getFullYear()} - developed by{' '}
           <a href="https://github.com/anmol5varma" target="_blank" rel="noopener noreferrer">
