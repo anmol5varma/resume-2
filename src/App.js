@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import About from './components/About/About'
+import Projects from './components/Projects/Projects'
+import Contact from './components/Contact/Contact'
+import Footer from './components/Footer/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+import { PortfolioProvider } from './context/context';
+import { heroData, aboutData, projectsData, contactData, footerData } from './mock/data';
+
+const App = () => {
+  const [hero, setHero] = useState({});
+  const [about, setAbout] = useState({});
+  const [projects, setProjects] = useState([]);
+  const [contact, setContact] = useState({});
+  const [footer, setFooter] = useState({});
+
+  useEffect(() => {
+    setHero({ ...heroData });
+    setAbout({ ...aboutData });
+    setProjects([...projectsData]);
+    setContact({ ...contactData });
+    setFooter({ ...footerData });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
+      {/* <Hero /> */}
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
+    </PortfolioProvider>
   );
 }
 

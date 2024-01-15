@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Helmet } from 'react-helmet';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { headData } from './mock/data';
+import './style/main.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const { title, lang, description } = headData;
 root.render(
   <React.StrictMode>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>{title}</title>
+      <html lang={lang} />
+      <meta name="description" content={description} />
+    </Helmet>
     <App />
   </React.StrictMode>
 );
