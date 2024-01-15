@@ -5,6 +5,7 @@ export const headData = {
   title: 'Anmol Varma', // e.g: 'Name | Developer'
   lang: '', // e.g: en, es, fr, jp
   description: '', // e.g: Welcome to my website
+  author: 'anmol5varma'
 };
 
 // HERO DATA

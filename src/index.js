@@ -8,15 +8,15 @@ import { headData } from './mock/data';
 import './style/main.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const { title, lang, description } = headData;
+const { title, author, description } = headData;
 root.render(
   // <React.StrictMode>
   <>
     <Helmet>
       <meta charSet="utf-8" />
       <title>{title}</title>
-      <html lang={lang} />
       <meta name="description" content={description} />
+      <meta name="author" content={author} />
     </Helmet>
     <App />
   </>
