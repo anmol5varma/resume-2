@@ -22,7 +22,7 @@ export const aboutData = {
   paragraphOne:
     'I’m a fullstack software developer from Bangalore, India. Currently, I work at Zoom. Before Zoom I have worked at Google, Flipkart and McKinsey & Company. I’ve been designing and developing solutions since 2018. I’ve mostly worked with JavaScript, NodeJS and JAVA.',
   paragraphTwo:
-    'I have extensively worked on REST APIs, designing micro-service architecture and managing React/Next apps. Apart from this, I also like taking sessions and coaching programs for a long-lasting impact.',
+    'I have extensively worked on REST APIs and gRPCs, designing micro-service architecture and managing Front end apps. Apart from this, I also like taking sessions and coaching programs for a long-lasting impact.',
   paragraphThree:
     'Although I do have a thing for JS but I believe in using the right tool for the job. A programming language is just a tool!',
   paragraphFour:
