@@ -7,7 +7,7 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "build"
+publish = "build/"
 publishOrigin = "ui"
 command = "yarn build"
 commandOrigin = "ui"
