@@ -34,6 +34,16 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
+    img: 'good-ipo.jpg',
+    title: 'good-ipo',
+    info:
+      'A CLI tool designed to provide you with an easy and convenient way to access information about current and upcoming Initial Public Offerings (IPOs).',
+    info2: '',
+    url: 'https://www.npmjs.com/package/good-ipo',
+    repo: 'https://github.com/anmol5varma/good-ipo',
+  },
+  {
+    id: nanoid(),
     img: 'json.jpg',
     title: 'JSON-Mocks',
     info:
@@ -76,11 +86,9 @@ export const projectsData = [
 
 // CONTACT DATA
 export const contactData = {
-  cta: "Super impressed by my elevator pitch? Let's Talk",
-  mailBtn: 'Mail me',
-  callBtn: 'Over phone',
-  email: 'anmol5varma@gmail.com',
-  number: '+918098469331',
+  cta: "Super impressed by my elevator pitch?",
+  mailBtn: 'Let\'s Talk',
+  email: 'https://topmate.io/anmol5varma'
 };
 
 // FOOTER DATA
