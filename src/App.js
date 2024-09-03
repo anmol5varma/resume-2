@@ -35,6 +35,7 @@ const App = () => {
       window.removeEventListener('scroll', trackScroll)
       window.removeEventListener('beforeunload', handlePageUnloadSingle)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
