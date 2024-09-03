@@ -1,6 +1,7 @@
 import ReactGA4 from 'react-ga4';
 
-ReactGA4.initialize('G-9K16GGKW5V'); // Replace with your Measurement ID
+console.log("tracking id", process.env.REACT_APP_TRACKING_ID);
+ReactGA4.initialize(process.env.REACT_APP_TRACKING_ID); // Replace with your Measurement ID
 
 export const handlePageView = (platform) => {
     ReactGA4.send({ hitType: "pageview", page: "/", title: "Home", platform });
