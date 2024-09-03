@@ -4,7 +4,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
 import AboutImg from '../Image/AboutImg';
 import PortfolioContext from '../../context/context';
-import ResumePdf from '../../files/anmol_varma_sde_resume.pdf';
+import ResumePdf from '../../files/anmol_varma_swe3.pdf';
+import { handleButtonClick } from '../../ga';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
@@ -48,6 +49,7 @@ const About = () => {
                     rel="noopener noreferrer"
                     className="cta-btn cta-btn--resume"
                     href={resume === '' ? ResumePdf : resume}
+                    onClick={() => handleButtonClick('resume')}
                   >
                     Resume
                   </a>

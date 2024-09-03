@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
+import { handleButtonClick } from '../../ga';
 
 const Projects = () => {
   const { projects, footer } = useContext(PortfolioContext);
@@ -54,6 +55,7 @@ const Projects = () => {
                           rel="noopener noreferrer"
                           className="cta-btn cta-btn--hero"
                           href={url}
+                          onClick={() => handleButtonClick(url)}
                         >
                           See Live
                         </a>
@@ -65,6 +67,7 @@ const Projects = () => {
                           rel="noopener noreferrer"
                           className="cta-btn text-color-main"
                           href={repo}
+                          onClick={() => handleButtonClick(repo)}
                         >
                           Source Code
                         </a>
@@ -86,6 +89,7 @@ const Projects = () => {
                         target="_blank"
                         aria-label="Project Link"
                         rel="noopener noreferrer"
+                        onClick={() => handleButtonClick(url)}
                       >
                         <div data-tilt className="thumbnail rounded">
                           <ProjectImg alt={title} filename={img} />
@@ -102,6 +106,7 @@ const Projects = () => {
             rel="noopener noreferrer"
             className="cta-btn cta-btn--hero"
             href={(footer?.networks?.length > 0 && footer?.networks[2].url).toString()}
+            onClick={() => handleButtonClick('projects')}
           >
             View more
           </a>

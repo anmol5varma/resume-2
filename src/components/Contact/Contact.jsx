@@ -3,6 +3,7 @@ import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
+import { handleButtonClick } from '../../ga';
 
 const Contact = () => {
   const { contact } = useContext(PortfolioContext);
@@ -22,6 +23,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="cta-btn cta-btn--resume contant-btn"
               href={email}
+              onClick={() => handleButtonClick('connect')}
             >
               <i className="fa fa-calendar" aria-hidden="true" />
               <span className="contact-btn-label">{mailBtn || "Let's Talk"}</span>

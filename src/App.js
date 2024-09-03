@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { PortfolioProvider } from './context/context';
 import { heroData, aboutData, projectsData, contactData, footerData } from './mock/data';
+import { handlePageUnload, trackScroll } from './ga';
 
 const App = () => {
   const [hero, setHero] = useState({});
@@ -15,6 +16,7 @@ const App = () => {
   const [projects, setProjects] = useState([]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
+  const [pageStartTime, setPageStartTime] = useState(Date.now());
 
   useEffect(() => {
     setHero({ ...heroData });
@@ -22,6 +24,14 @@ const App = () => {
     setProjects([...projectsData]);
     setContact({ ...contactData });
     setFooter({ ...footerData });
+    setPageStartTime(Date.now())
+    window.addEventListener('scroll', trackScroll);
+    window.addEventListener('beforeunload', () => handlePageUnload(pageStartTime));
+
+    return () => {
+      window.removeEventListener('scroll', trackScroll)
+      window.removeEventListener('beforeunload', () => handlePageUnload(pageStartTime))
+    }
   }, []);
 
   return (

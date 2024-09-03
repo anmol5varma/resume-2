@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
+import { handleSocialClick } from '../../ga';
 
 const Footer = () => {
   const { footer } = useContext(PortfolioContext);
@@ -26,16 +27,17 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label={name}
+                  onClick={() => handleSocialClick(name)}
                 >
                   <i className={`fa fa-${name || 'refresh'} fa-inverse`} />
                 </a>
               );
             })}
         </div>
-        <hr style={{width: '100%'}}/>
+        <hr style={{ width: '100%' }} />
         <p className="footer__text">
           © {new Date().getFullYear()} - developed by{' '}
-          <a href="https://github.com/anmol5varma" target="_blank" rel="noopener noreferrer">
+          <a onClick={() => handleSocialClick('github')} href="https://github.com/anmol5varma" target="_blank" rel="noopener noreferrer">
             Anmol Varma
           </a>
         </p>
