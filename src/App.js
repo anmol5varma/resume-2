@@ -25,12 +25,15 @@ const App = () => {
     setContact({ ...contactData });
     setFooter({ ...footerData });
     setPageStartTime(Date.now())
+    
+    const handlePageUnloadSingle = () => handlePageUnload(pageStartTime)
+
     window.addEventListener('scroll', trackScroll);
-    window.addEventListener('beforeunload', () => handlePageUnload(pageStartTime));
+    window.addEventListener('beforeunload', handlePageUnloadSingle);
 
     return () => {
       window.removeEventListener('scroll', trackScroll)
-      window.removeEventListener('beforeunload', () => handlePageUnload(pageStartTime))
+      window.removeEventListener('beforeunload', handlePageUnloadSingle)
     }
   }, []);
 

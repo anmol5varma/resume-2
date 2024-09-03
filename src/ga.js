@@ -22,7 +22,7 @@ export const handleButtonClick = (label) => {
     const event = {
         category: "button",
         action: "clicked",
-        label: "button_click", // optional
+        label: `${label}_button_click`, // optional
     }
     ReactGA4.event(event);
 };
@@ -31,7 +31,7 @@ export const handleSocialClick = (network) => {
     const event = {
         category: "social_engagement",
         action: "clicked",
-        label: "social_click", // optional
+        label: `${network}_social_click`, // optional
     }
     ReactGA4.event(event);
 };
